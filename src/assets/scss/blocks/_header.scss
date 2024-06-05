@@ -1,0 +1,15 @@
+.header {
+
+
+  &__inner {
+    padding: 20px;
+
+    @include desktop {
+      padding: 28px 0;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+  }
+}

@@ -1,11 +1,10 @@
-#app {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
+@import './reset';
+@import './fonts';
+@import './mixins';
+@import './media';
+@import './variables';
+@import './utils';
+@import './globals';
 
-  .test {
-    background-color: red;
-    width: 100px;
-    height: 100px;
-  }
-}
+@import './blocks/header';
+

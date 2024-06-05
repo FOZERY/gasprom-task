@@ -1,3 +1,9 @@
+<script setup>
+import TheHeader from '@/components/TheHeader.vue';
+import TheDivider from '@/components/TheDivider.vue';
+</script>
+
 <template>
-    <div class="test">Hello</div>
+    <TheHeader />
+    <TheDivider />
 </template>
