@@ -1,6 +1,5 @@
 .header {
 
-
   &__inner {
     padding: 20px;
 
@@ -10,6 +9,8 @@
   }
 
   &__logo {
-    display: inline-block;
+    display: block;
+    width: 148px;
+    height: 40px;
   }
 }
