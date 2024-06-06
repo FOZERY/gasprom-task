@@ -2,3 +2,12 @@
   max-width: var(--container-width);
   margin-inline: auto;
 }
+
+.section {
+  padding-inline: 16px;
+}
+
+.no-wrap {
+  display: inline-block;
+  text-wrap: nowrap;
+}

@@ -4,4 +4,24 @@ body {
   font-weight: 400;
   line-height: var(--paragraph-line-height);
   background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: var(--h1-font-size-mobile);
+  line-height: var(--h1-line-height);
+
+  @include tablet {
+    font-size: var(--h1-font-size);
+  }
+}
+
+p {
+  font-size: var(--paragraph-font-size-mobile);
+  line-height: var(--paragraph-line-height-mobile);
+
+  @include tablet {
+    font-size: var(--paragraph-font-size);
+    line-height: var(--paragraph-line-height);
+  }
 }

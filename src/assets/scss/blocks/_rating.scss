@@ -1,0 +1,39 @@
+.rating {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40px);
+    justify-content: space-between;
+    column-gap: 5.75px;
+    row-gap: 10px;
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fit, 40px);
+    }
+  }
+
+  &__button {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: var(--border-blue);
+    border-radius: var(--border-radius-round);
+    width: 40px;
+    height: 40px;
+    font-size: var(--caption-font-size);
+    line-height: var(--caption-line-height);
+    text-align: center;
+    transition: background-color var(--transition-duration);
+    cursor: pointer;
+
+    @include hover {
+      background-color: var(--color-blue);
+    }
+
+    &:focus-visible {
+      background-color: var(--color-blue);
+    }
+
+    &--active {
+      background-color: var(--color-blue);
+    }
+  }
+}
