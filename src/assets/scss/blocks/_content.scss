@@ -1,0 +1,17 @@
+.content {
+
+
+  &__image {
+    padding: 12px 0;
+  }
+
+  &__image-img {
+    width: 100%;
+    margin-inline: auto;
+    min-width: 373px;
+    min-height: 164px;
+
+    max-width: 455px;
+    max-height: 200px;
+  }
+}
