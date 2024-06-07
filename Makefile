@@ -7,7 +7,7 @@ install-production:
 run:
 	npm run dev
 
-run-build:
+run-prod:
 	npm run build
 	npm run preview
 
