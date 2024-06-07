@@ -1,18 +1,11 @@
-<script setup></script>
+<script setup>
+import TheLogo from '@/components/TheLogo.vue';
+</script>
 
 <template>
     <header class="header">
         <div class="header__inner container">
-            <a href="" class="header__logo logo">
-                <img
-                    src="/images/logo.svg"
-                    alt="Rutube"
-                    class="logo__image"
-                    width="148"
-                    height="40"
-                    loading="lazy"
-                />
-            </a>
+            <TheLogo class="header__logo" />
         </div>
     </header>
 </template>
