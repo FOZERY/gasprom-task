@@ -7,5 +7,5 @@ import TheContent from '@/components/TheContent.vue';
 <template>
     <TheHeader />
     <TheDivider />
-    <TheContent />
+    <router-view />
 </template>
