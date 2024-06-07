@@ -19,7 +19,7 @@ npm install
 ```sh
 npm run dev
 ```
-Развернется по 5173 порту: 
+Развернется на 5173 порту: 
 http://localhost:5173 
 
 ### Prod build
@@ -31,6 +31,8 @@ npm run build
 ```sh
 npm run preview
 ```
+Развернется на 4173 порту:
+http://localhost:4173
 
 ### Lint with [ESLint](https://eslint.org/)
 
