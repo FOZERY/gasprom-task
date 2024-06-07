@@ -3,11 +3,51 @@ import TheButton from '@/components/TheButton.vue';
 import RatingList from '@/components/RatingList.vue';
 import ContentQuizBlock from '@/components/ContentQuizBlock.vue';
 
+import router from '@/router/router.js';
+
 import {
     ratingItemsOneToFive,
     ratingItemsTimeQuestion,
     ratingItemsZeroToTen,
 } from '@/utils/ratingItemsTemplates.js';
+import { useQuestionStore } from '@/store/questionStore.js';
+
+const questionStore = useQuestionStore();
+
+const setAnswer = (questionId, responseId) => {
+    const index = questionStore.answers.findIndex(
+        (answer) => answer.questionID === questionId
+    );
+    if (index === -1) {
+        const answerToSave = {
+            questionID: questionId,
+            responseID: responseId,
+        };
+        questionStore.answers.push(answerToSave);
+        localStorage.setItem('answers', JSON.stringify(questionStore.answers));
+    } else {
+        questionStore.answers[index].responseID = responseId;
+        localStorage.setItem('answers', JSON.stringify(questionStore.answers));
+    }
+};
+
+const goNextPage = async () => {
+    const request = {
+        rating: questionStore.rating,
+        answers: questionStore.answers.sort(
+            (a, b) => a.questionID - b.questionID
+        ),
+    };
+
+    console.log(JSON.stringify(request));
+
+    await router.push({ name: 'third' });
+
+    localStorage.setItem('completed', 'true');
+};
+
+questionStore.rating = JSON.parse(localStorage.getItem('rating'));
+questionStore.answers = JSON.parse(localStorage.getItem('answers') || '[]');
 </script>
 
 <template>
@@ -32,6 +72,10 @@ import {
                 </template>
                 <template #body>
                     <RatingList
+                        @set-answer="
+                            (questionId, responseId) =>
+                                setAnswer(questionId, responseId)
+                        "
                         class="rating__list--column"
                         :rating-items="ratingItemsTimeQuestion"
                         :question-id="1"
@@ -45,6 +89,10 @@ import {
                 </template>
                 <template #body>
                     <RatingList
+                        @set-answer="
+                            (questionId, responseId) =>
+                                setAnswer(questionId, responseId)
+                        "
                         :rating-items="ratingItemsOneToFive"
                         :question-id="2"
                     />
@@ -57,6 +105,10 @@ import {
                 </template>
                 <template #body>
                     <RatingList
+                        @set-answer="
+                            (questionId, responseId) =>
+                                setAnswer(questionId, responseId)
+                        "
                         :rating-items="ratingItemsOneToFive"
                         :question-id="3"
                     />
@@ -68,6 +120,10 @@ import {
                 </template>
                 <template #body>
                     <RatingList
+                        @set-answer="
+                            (questionId, responseId) =>
+                                setAnswer(questionId, responseId)
+                        "
                         :rating-items="ratingItemsOneToFive"
                         :question-id="4"
                     />
@@ -79,6 +135,10 @@ import {
                 </template>
                 <template #body>
                     <RatingList
+                        @set-answer="
+                            (questionId, responseId) =>
+                                setAnswer(questionId, responseId)
+                        "
                         :rating-items="ratingItemsOneToFive"
                         :question-id="5"
                     />
@@ -91,13 +151,20 @@ import {
                 </template>
                 <template #body>
                     <RatingList
+                        @set-answer="
+                            (questionId, responseId) =>
+                                setAnswer(questionId, responseId)
+                        "
                         :rating-items="ratingItemsZeroToTen"
                         :question-id="6"
                     />
                 </template>
             </ContentQuizBlock>
 
-            <TheButton :disabled="true" class="content-quiz__button"
+            <TheButton
+                @click="goNextPage"
+                :disabled="!questionStore.filled"
+                class="content-quiz__button"
                 >Отправить ответы</TheButton
             >
         </div>

@@ -3,7 +3,25 @@ import TheContentImage from '@/components/TheContentImage.vue';
 import TheContentForm from '@/components/TheContentForm.vue';
 import RatingList from '@/components/RatingList.vue';
 
+import router from '@/router/router.js';
+
 import { ratingItemsZeroToNine } from '@/utils/ratingItemsTemplates.js';
+import { useQuestionStore } from '@/store/questionStore.js';
+
+const questionStore = useQuestionStore();
+
+const goNextPage = async () => {
+    await router.push({ name: 'second' });
+};
+
+const setAnswer = async (_, responseId) => {
+    questionStore.rating = responseId;
+    localStorage.setItem('rating', responseId);
+
+    await goNextPage();
+};
+
+questionStore.rating = JSON.parse(localStorage.getItem('rating'));
 </script>
 
 <template>
@@ -24,6 +42,10 @@ import { ratingItemsZeroToNine } from '@/utils/ratingItemsTemplates.js';
                     </p>
                     <div class="content__rating rating">
                         <RatingList
+                            @set-answer="
+                                (questionId, responseId) =>
+                                    setAnswer(questionId, responseId)
+                            "
                             class="content__rating-list"
                             :rating-items="ratingItemsZeroToNine"
                             :question-id="0"

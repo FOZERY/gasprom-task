@@ -2,33 +2,31 @@
 import { onMounted, ref } from 'vue';
 
 import ButtonRating from '@/components/ButtonRating.vue';
+import { useQuestionStore } from '@/store/questionStore.js';
+
+const props = defineProps({
+    questionId: { type: Number, default: null },
+    ratingItems: { type: Array, default: null },
+});
+
+const questionStore = useQuestionStore();
 
 const activeId = ref(null);
 
 const updateResponse = (questionId, responseId) => {
-    const answers = JSON.parse(localStorage.getItem('answers') || '[]');
-
-    const index = answers.findIndex(
-        (answer) => answer.questionID === questionId
-    );
-    if (index === -1) {
-        const answerToSave = {
-            questionID: questionId,
-            responseID: responseId,
-        };
-        answers.push(answerToSave);
-        localStorage.setItem('answers', JSON.stringify(answers));
-    } else {
-        answers[index].responseID = responseId;
-        localStorage.setItem('answers', JSON.stringify(answers));
-    }
-
     activeId.value = responseId;
+
+    emit('setAnswer', questionId, responseId);
 };
 
 onMounted(() => {
-    const answers = JSON.parse(localStorage.getItem('answers'));
-    if (answers) {
+    if (props.questionId === 0) {
+        activeId.value = questionStore.rating;
+        return;
+    }
+
+    const answers = questionStore.answers;
+    if (answers.length > 0) {
         const answer = answers.find(
             (answer) => answer.questionID === props.questionId
         );
@@ -38,10 +36,7 @@ onMounted(() => {
     }
 });
 
-const props = defineProps({
-    questionId: { type: Number, default: null },
-    ratingItems: { type: Array, default: null },
-});
+const emit = defineEmits(['setAnswer']);
 </script>
 
 <template>
