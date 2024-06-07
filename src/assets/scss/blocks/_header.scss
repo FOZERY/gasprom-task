@@ -1,16 +1,15 @@
 .header {
+    &__inner {
+        padding: 20px;
 
-  &__inner {
-    padding: 20px;
-
-    @include desktop {
-      padding: 28px 0;
+        @include desktop {
+            padding: 28px 0;
+        }
     }
-  }
 
-  &__logo {
-    display: block;
-    width: 148px;
-    height: 40px;
-  }
+    &__logo {
+        display: block;
+        width: 148px;
+        height: 40px;
+    }
 }

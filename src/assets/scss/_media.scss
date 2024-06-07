@@ -4,39 +4,39 @@ $tablet-below: 1023px;
 $mobile: 320px;
 
 @mixin desktop {
-  @media screen and (min-width: $desktop) {
-    @content;
-  }
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
 }
 
 @mixin tablet {
-  @media screen and (min-width: $tablet) {
-    @content;
-  }
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
 }
 
 @mixin mobile {
-  @media screen and (min-width: $mobile) {
-    @content;
-  }
+    @media screen and (min-width: $mobile) {
+        @content;
+    }
 }
 
 @mixin tablet-below {
-  @media screen and (max-width: $tablet-below) {
-    @content;
-  }
+    @media screen and (max-width: $tablet-below) {
+        @content;
+    }
 }
 
 @mixin hover {
-  @media (hover: hover) {
-    &:hover {
-      @content;
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
     }
-  }
 
-  @media (hover: none) {
-    &:active {
-      @content;
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
     }
-  }
 }

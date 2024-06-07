@@ -1,6 +1,4 @@
-<script setup>
-import ButtonRating from '@/components/ButtonRating.vue';
-</script>
+<script setup></script>
 
 <template>
     <div class="content__form section">

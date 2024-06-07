@@ -1,59 +1,58 @@
 body {
-  font-family: var(--font-family-base);
-  font-size: var(--paragraph-font-size);
-  font-weight: 400;
-  line-height: var(--paragraph-line-height);
-  background-color: var(--color-black);
-  color: var(--color-white);
+    font-family: var(--font-family-base);
+    font-size: var(--paragraph-font-size);
+    font-weight: 400;
+    line-height: var(--paragraph-line-height);
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
 
 h1 {
-  font-size: var(--h1-font-size-mobile);
-  line-height: var(--h1-line-height);
+    font-size: var(--h1-font-size-mobile);
+    line-height: var(--h1-line-height);
 
-  @include tablet {
-    font-size: var(--h1-font-size);
-  }
+    @include tablet {
+        font-size: var(--h1-font-size);
+    }
 }
 
 p {
-  font-size: var(--paragraph-font-size-mobile);
-  line-height: var(--paragraph-line-height-mobile);
+    font-size: var(--paragraph-font-size-mobile);
+    line-height: var(--paragraph-line-height-mobile);
 
-  @include tablet {
-    font-size: var(--paragraph-font-size);
-    line-height: var(--paragraph-line-height);
-  }
+    @include tablet {
+        font-size: var(--paragraph-font-size);
+        line-height: var(--paragraph-line-height);
+    }
 }
 
 .h1 {
-  font-size: var(--h1-font-size) !important;
-  line-height: var(--h1-line-height) !important;
-
-  &--mobile {
-    font-size: var(--h1-font-size-mobile) !important;
+    font-size: var(--h1-font-size) !important;
     line-height: var(--h1-line-height) !important;
-  }
+
+    &--mobile {
+        font-size: var(--h1-font-size-mobile) !important;
+        line-height: var(--h1-line-height) !important;
+    }
 }
 
 .h3 {
-  font-size: var(--h3-font-size);
-  line-height: var(--h3-line-height);
-  font-weight: 400;
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-weight: 400;
 }
 
 .paragraph {
-  font-size: var(--paragraph-font-size) !important;
-  line-height: var(--paragraph-line-height) !important;
+    font-size: var(--paragraph-font-size) !important;
+    line-height: var(--paragraph-line-height) !important;
 
-  &--mobile {
-    font-size: var(--paragraph-font-size-mobile) !important;
-    line-height: var(--paragraph-line-height-mobile) !important;
-  }
+    &--mobile {
+        font-size: var(--paragraph-font-size-mobile) !important;
+        line-height: var(--paragraph-line-height-mobile) !important;
+    }
 }
 
 .caption {
-  font-size: var(--caption-font-size) !important;
-  line-height: var(--caption-line-height) !important;
+    font-size: var(--caption-font-size) !important;
+    line-height: var(--caption-line-height) !important;
 }
-

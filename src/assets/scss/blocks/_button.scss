@@ -1,20 +1,20 @@
 .button {
-  width: var(--button-width-lg);
-  height: var(--button-height-lg);
-  padding: 12px 16px;
-  border: 0;
-  border-radius: 22px;
-  background-color: var(--color-blue-accent);
-  color: var(--color-white);
-  text-align: center;
-  font-size: var(--button-font-size);
-  line-height: var(--button-line-height);
-  text-decoration: none;
-  font-weight: 700;
-  cursor: pointer;
+    width: var(--button-width-lg);
+    height: var(--button-height-lg);
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 22px;
+    background-color: var(--color-blue-accent);
+    color: var(--color-white);
+    text-align: center;
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
 
-  &--disabled {
-    cursor: default;
-    opacity: 0.5;
-  }
+    &--disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
 }

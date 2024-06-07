@@ -1,47 +1,53 @@
 :root {
-  --color-black: #020B14;
-  --color-white: #FFFFFF;
-  --color-blue: #1F73F9;
-  --color-blue-accent:  #00A1E7;
-  --color-gray: #BFC9D4;
-  --color-gradient: linear-gradient(90deg, rgba(6,153,219,1) 0%, rgba(45,94,135,1) 25%, rgba(46,42,63,1) 50%, rgba(52,25,38,1) 75%, rgba(21,12,21,1) 100%);
+    --color-black: #020b14;
+    --color-white: #ffffff;
+    --color-blue: #1f73f9;
+    --color-blue-accent: #00a1e7;
+    --color-gray: #bfc9d4;
+    --color-gradient: linear-gradient(
+        90deg,
+        rgba(6, 153, 219, 1) 0%,
+        rgba(45, 94, 135, 1) 25%,
+        rgba(46, 42, 63, 1) 50%,
+        rgba(52, 25, 38, 1) 75%,
+        rgba(21, 12, 21, 1) 100%
+    );
 
-  --border-blue: 1px solid var(--color-blue);
-  --border-radius-round: 100%;
-  --border-radius-sm: 20px;
-  --border-radius-lg: 22px;
+    --border-blue: 1px solid var(--color-blue);
+    --border-radius-round: 100%;
+    --border-radius-sm: 20px;
+    --border-radius-lg: 22px;
 
-  --font-family-base: 'Roboto', sans-serif;
+    --font-family-base: 'Roboto', sans-serif;
 
-  --h1-font-size: 30px;
-  --h1-line-height: 35px;
+    --h1-font-size: 30px;
+    --h1-line-height: 35px;
 
-  --h1-font-size-mobile: 22px;
+    --h1-font-size-mobile: 22px;
 
-  --h3-font-size: 12px;
-  --h3-line-height: 20px;
+    --h3-font-size: 12px;
+    --h3-line-height: 20px;
 
-  --paragraph-font-size: 17px;
-  --paragraph-line-height: 22px;
+    --paragraph-font-size: 17px;
+    --paragraph-line-height: 22px;
 
-  --paragraph-font-size-mobile: 12px;
-  --paragraph-line-height-mobile: 20px;
+    --paragraph-font-size-mobile: 12px;
+    --paragraph-line-height-mobile: 20px;
 
+    --caption-font-size: 14px;
+    --caption-line-height: 20px;
 
-  --caption-font-size: 14px;
-  --caption-line-height: 20px;
+    --button-font-size: 14px;
+    --button-line-height: 20px;
 
-  --button-font-size: 14px;
-  --button-line-height: 20px;
+    --button-width-lg: 222px;
+    --button-width-sm: 200px;
 
-  --button-width-lg: 222px;
-  --button-width-sm: 200px;
+    --button-height-lg: 44px;
+    --button-height-sm: 40px;
 
-  --button-height-lg: 44px;
-  --button-height-sm: 40px;
+    --container-width: 1053px;
+    --container-padding-x: 16px;
 
-  --container-width: 1053px;
-  --container-padding-x: 16px;
-
-  --transition-duration: 0.2s;
+    --transition-duration: 0.2s;
 }

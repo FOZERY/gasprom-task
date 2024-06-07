@@ -1,31 +1,31 @@
 .container {
-  max-width: var(--container-width);
-  margin-inline: auto;
+    max-width: var(--container-width);
+    margin-inline: auto;
 }
 
 .section {
-  padding-inline: 16px;
+    padding-inline: 16px;
 
-  @include desktop {
-    padding-inline: 0;
-  }
+    @include desktop {
+        padding-inline: 0;
+    }
 }
 
 .no-wrap {
-  display: inline-block;
-  text-wrap: nowrap;
+    display: inline-block;
+    text-wrap: nowrap;
 }
 
 .relative {
-  position: relative;
+    position: relative;
 }
 
 .absolute {
-  position: absolute;
+    position: absolute;
 }
 
 .hidden-mobile {
-  @include tablet-below {
-    display: none !important;
-  }
+    @include tablet-below {
+        display: none !important;
+    }
 }

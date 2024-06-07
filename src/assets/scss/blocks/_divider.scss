@@ -1,11 +1,10 @@
 .divider {
+    &__inner {
+        padding: 9px 0;
+    }
 
-  &__inner {
-    padding: 9px 0;
-  }
-
-  &__line {
-    height: 2px;
-    background: var(--color-gradient);
-  }
+    &__line {
+        height: 2px;
+        background: var(--color-gradient);
+    }
 }
