@@ -9,16 +9,9 @@
 Препроцессор стилей SCSS.
 
 ## Для сборки проекта
-### Dev install
 ```sh
 make install
 ```
-
-### Prod install
-```sh
-make install-prod
-```
-
 ### Dev build
 
 ```sh

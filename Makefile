@@ -1,9 +1,6 @@
 install:
 	npm install
 
-install-prod:
-	npm install --production
-
 run:
 	npm run dev
 
