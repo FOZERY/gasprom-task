@@ -1,6 +1,7 @@
 <script setup>
 import TheContentImage from '@/components/TheContentImage.vue';
 import TheContentForm from '@/components/TheContentForm.vue';
+import TheButton from '@/components/TheButton.vue';
 </script>
 
 <template>
@@ -13,8 +14,11 @@ import TheContentForm from '@/components/TheContentForm.vue';
                     <p class="content__paragraph paragraph">
                         Это поможет нам улучшить сервис
                     </p>
-                    <a href="https://rutube.ru/" class="content__button button"
-                        >Перейти на платформу</a
+                    <TheButton
+                        :is-link="true"
+                        :url="'https://rutube.ru/'"
+                        class="content__button"
+                        >Перейти на платформу</TheButton
                     >
                 </template>
             </TheContentForm>

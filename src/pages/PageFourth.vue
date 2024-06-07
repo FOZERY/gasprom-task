@@ -1,12 +1,7 @@
 <script setup>
-import TheContent from '@/components/TheContent.vue';
 import TheContentImage from '@/components/TheContentImage.vue';
-import ButtonRating from '@/components/ButtonRating.vue';
 import TheContentForm from '@/components/TheContentForm.vue';
-
-import { ref } from 'vue';
-
-const activeId = ref(null);
+import TheButton from '@/components/TheButton.vue';
 </script>
 
 <template>
@@ -24,8 +19,12 @@ const activeId = ref(null);
                         <br />
                         и помогаете нам быть лучше
                     </p>
-                    <a href="https://rutube.ru/" class="content__button button"
-                        >Перейти на RUTUBE</a
+
+                    <TheButton
+                        class="content__button"
+                        :is-link="true"
+                        :url="'https://rutube.ru/'"
+                        >Перейти на RUTUBE</TheButton
                     >
                 </template>
             </TheContentForm>
