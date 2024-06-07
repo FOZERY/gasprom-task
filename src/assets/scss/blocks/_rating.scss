@@ -1,13 +1,12 @@
 .rating {
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 40px);
-    justify-content: space-between;
-    column-gap: 5.75px;
-    row-gap: 10px;
+  &__list{
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
 
-    @include tablet {
-      grid-template-columns: repeat(auto-fit, 40px);
+    &--column {
+      flex-direction: column;
     }
   }
 
@@ -15,12 +14,14 @@
     background-color: var(--color-black);
     color: var(--color-white);
     border: var(--border-blue);
-    border-radius: var(--border-radius-round);
-    width: 40px;
+    border-radius: var(--border-radius-sm);
+    width: 200px;
     height: 40px;
-    font-size: var(--caption-font-size);
-    line-height: var(--caption-line-height);
-    text-align: center;
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-weight: 400;
+    text-align: left;
+    padding: 10px 16px;
     transition: background-color var(--transition-duration);
     cursor: pointer;
 
@@ -34,6 +35,16 @@
 
     &--active {
       background-color: var(--color-blue);
+    }
+
+    &--round {
+      width: 40px;
+      padding: 0;
+      height: 40px;
+      text-align: center;
+      font-size: var(--caption-font-size);
+      line-height: var(--caption-line-height);
+      border-radius: var(--border-radius-round);
     }
   }
 }

@@ -25,3 +25,35 @@ p {
     line-height: var(--paragraph-line-height);
   }
 }
+
+.h1 {
+  font-size: var(--h1-font-size) !important;
+  line-height: var(--h1-line-height) !important;
+
+  &--mobile {
+    font-size: var(--h1-font-size-mobile) !important;
+    line-height: var(--h1-line-height) !important;
+  }
+}
+
+.h3 {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+  font-weight: 400;
+}
+
+.paragraph {
+  font-size: var(--paragraph-font-size) !important;
+  line-height: var(--paragraph-line-height) !important;
+
+  &--mobile {
+    font-size: var(--paragraph-font-size-mobile) !important;
+    line-height: var(--paragraph-line-height-mobile) !important;
+  }
+}
+
+.caption {
+  font-size: var(--caption-font-size) !important;
+  line-height: var(--caption-line-height) !important;
+}
+

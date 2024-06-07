@@ -1,22 +1,33 @@
 .content {
-
-
   &__image {
     padding: 12px 0;
   }
 
   &__image-img {
-    width: 100%;
     margin-inline: auto;
-    min-width: 310px;
-    max-width: 455px;
+    min-width:310px;
+    max-width:375px;
+
+    @include tablet {
+      width: 524px;
+      max-width: 524px;
+    }
+
+    &--smaller {
+      min-width: 310px;
+      max-width: 375px;
+
+      @include tablet {
+        width: 455px;
+        max-width: 455px;
+      }
+    }
   }
 
   &__form {
     max-width: 550px;
     margin-inline: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +35,8 @@
 
     @include tablet {
       gap: 28px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 
@@ -43,11 +56,18 @@
   &__rating-list {
     padding: 0 60px;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40px);
+    justify-content: space-between;
+    column-gap: 5.75px;
+    row-gap: 10px;
 
     @include tablet {
       padding: 0;
+      grid-template-columns: repeat(auto-fit, 40px);
     }
   }
+
 
   &__rating-caption {
     width: 100%;
@@ -57,5 +77,10 @@
     font-size: var(--caption-font-size);
     line-height: var(--caption-line-height);
     color: var(--color-gray);
+    padding-inline: 32px;
+
+    @include tablet {
+      padding-inline: 0;
+    }
   }
 }

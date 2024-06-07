@@ -5,9 +5,27 @@
 
 .section {
   padding-inline: 16px;
+
+  @include desktop {
+    padding-inline: 0;
+  }
 }
 
 .no-wrap {
   display: inline-block;
   text-wrap: nowrap;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.hidden-mobile {
+  @include tablet-below {
+    display: none !important;
+  }
 }
