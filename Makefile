@@ -1,7 +1,7 @@
 install:
 	npm install
 
-install-production:
+install-prod:
 	npm install --production
 
 run:

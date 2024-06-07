@@ -9,15 +9,20 @@
 Препроцессор стилей SCSS.
 
 ## Для сборки проекта
-
+### Dev install
 ```sh
-npm install
+make install
+```
+
+### Prod install
+```sh
+make install-prod
 ```
 
 ### Dev build
 
 ```sh
-npm run dev
+make run
 ```
 Развернется на 5173 порту: 
 http://localhost:5173 
@@ -25,11 +30,7 @@ http://localhost:5173
 ### Prod build
 
 ```sh
-npm run build
-```
-
-```sh
-npm run preview
+make run-prod
 ```
 Развернется на 4173 порту:
 http://localhost:4173
@@ -37,12 +38,12 @@ http://localhost:4173
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm run lint
+make lint
 ```
 
 ### Prettier
 ```sh
-npm run format
+make format
 ```
 
 ### GitHub
