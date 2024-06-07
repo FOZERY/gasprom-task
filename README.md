@@ -1,31 +1,35 @@
 # gasprom-task
 
-This template should help get you started developing with Vue 3 in Vite.
+Тестовое задание на фронтенд-стажёра для ГПМХ (Газпром медиа холдинг).
 
-## Recommended IDE Setup
+Тестовое задание выполнено с помощью фреймворка Vue.js, а также Vue Router + Pinia. 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Сборщик - Vite. 
 
-## Customize configuration
+Препроцессор стилей SCSS.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Для сборки проекта
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Dev build
 
 ```sh
 npm run dev
 ```
+Развернется по 5173 порту: 
+http://localhost:5173 
 
-### Compile and Minify for Production
+### Prod build
 
 ```sh
 npm run build
+```
+
+```sh
+npm run preview
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
@@ -33,3 +37,11 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Prettier
+```sh
+npm run format
+```
+
+### GitHub
+https://github.com/FOZERY/gasprom-task
