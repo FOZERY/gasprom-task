@@ -27,10 +27,28 @@ const routes = [
             },
         ],
     },
+    {
+        path: '/:pathMatch(.*)*',
+        redirect: '/',
+    },
 ];
 const router = createRouter({
     routes,
     history: createWebHistory(import.meta.env.BASE_URL),
+});
+
+router.beforeEach((to, from, next) => {
+    if (to.name === 'first' || to.name === 'second' || to.name === 'third') {
+        const isCompleted = localStorage.getItem('completed');
+
+        if (isCompleted) {
+            next({ name: 'fourth' });
+        } else {
+            next();
+        }
+    } else {
+        next();
+    }
 });
 
 export default router;
